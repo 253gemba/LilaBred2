@@ -129,57 +129,109 @@ breds_zone_choice_button = (
 
 
 
-# Брейды > зона: вся голова > толщина
+# Брейды > зона: вся голова > с материалом > толщина
 
-breds_head_materials_big = KeyboardButton("С материалом: 2-4 шт.")
+breds_head_materials_big = KeyboardButton("2-4 шт.")
 
-breds_head_materials_thick = KeyboardButton("С материалом: 5-7 шт.")
+breds_head_materials_thick = KeyboardButton("5-7 шт.")
 
-breds_head_materials_middle = KeyboardButton("С материалом: 8-10 шт.")
+breds_head_materials_middle = KeyboardButton("8-10 шт.")
 
-breds_head_big = KeyboardButton("Без материала: 2-4 шт.")
+back_zone_breds = KeyboardButton("Назад к выбору наличия материалов")
 
-breds_head_thick = KeyboardButton("Без материала: 5-7 шт.")
-
-breds_head_middle = KeyboardButton("Без материала: 8-10 шт.")
-
-back_zone_breds = KeyboardButton("Назад к выбору зоны для брейдов")
-
-breds_head_thickness_button = (
+breds_head_material_thickness_button = (
     ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
     .add(breds_head_materials_big)
     .insert(breds_head_materials_thick)
     .insert(breds_head_materials_middle)
-    .insert(breds_head_big)
+    .insert(back_zone_breds)
+)
+
+
+
+# Брейды > зона: вся голова > без материала > толщина
+
+breds_head_big = KeyboardButton("2-4 шт.")
+
+breds_head_thick = KeyboardButton("5-7 шт.")
+
+breds_head_middle = KeyboardButton("8-10 шт.")
+
+back_zone_breds = KeyboardButton("Назад к выбору наличия материалов")
+
+breds_head_thickness_button = (
+    ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
+    .add(breds_head_big)
     .insert(breds_head_thick)
     .insert(breds_head_middle)
     .insert(back_zone_breds)
 )
 
 
-# Брейды > зона: макушка > толщина
 
-breds_undercut_materials_big = KeyboardButton("С матeриалом: 2-4 шт.")
+# Брейды > зона: макушка > с материалом > толщина
 
-breds_undercut_materials_thick = KeyboardButton("С матeриалом: 5-7 шт.")
+breds_undercut_materials_big = KeyboardButton("2-4 шт.")
 
-breds_undercut_materials_middle = KeyboardButton("С матeриалом: 8-10 шт.")
+breds_undercut_materials_thick = KeyboardButton("5-7 шт.")
 
-breds_undercut_big = KeyboardButton("Без матeриала: 2-4 шт.")
+breds_undercut_materials_middle = KeyboardButton("8-10 шт.")
 
-breds_undercut_thick = KeyboardButton("Без матeриала: 5-7 шт.")
+back_zone_breds = KeyboardButton("Назад к выбору наличия материалов")
 
-breds_undercut_middle = KeyboardButton("Без матeриала: 8-10 шт.")
-
-back_zone_breds = KeyboardButton("Назад к выбору зоны для брейдов")
-
-breds_undercut_thickness_button = (
+breds_undercut_material_thickness_button = (
     ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
     .add(breds_undercut_materials_big)
     .insert(breds_undercut_materials_thick)
     .insert(breds_undercut_materials_middle)
-    .insert(breds_undercut_big)
+    .insert(back_zone_breds)
+)
+
+
+# Брейды > зона: макушка > без материала > толщина
+
+breds_undercut_big = KeyboardButton("2-4 шт.")
+
+breds_undercut_thick = KeyboardButton("5-7 шт.")
+
+breds_undercut_middle = KeyboardButton("8-10 шт.")
+
+back_breds_undercut_material = KeyboardButton("Назад к выбору наличия материалов")
+
+breds_undercut_thickness_button = (
+    ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
+    .add(breds_undercut_big)
     .insert(breds_undercut_thick)
     .insert(breds_undercut_middle)
+    .insert(back_zone_breds)
+)
+
+# Брейды > зона: макушка > с материалом / без материала
+
+breds_undercut_with_material = KeyboardButton("С материалом")
+
+breds_undercut_without = KeyboardButton("Без материала")
+
+back_zone_breds = KeyboardButton("Назад к выбору зоны для брейдов")
+
+breds_undercut_material_button = (
+    ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
+    .add(breds_undercut_with_material)
+    .insert(breds_undercut_without)
+    .insert(back_zone_breds)
+)
+
+# Брейды > зона: голова > с материалом / без материала
+
+breds_head_with_material = KeyboardButton("С материалом")
+
+breds_head_without = KeyboardButton("Без материала")
+
+back_zone_breds = KeyboardButton("Назад к выбору зоны для брейдов")
+
+breds_head_material_button = (
+    ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=False)
+    .add(breds_head_with_material)
+    .insert(breds_head_without)
     .insert(back_zone_breds)
 )
