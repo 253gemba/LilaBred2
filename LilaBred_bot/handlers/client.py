@@ -20,6 +20,69 @@ async def send_welcome(message: types.Message):
     )
     await HaircutState.initialize.set()
 
+# Кнопка назад
+@dp.message_handler(Text(equals='назад', ignore_case=True), state='*')
+async def back(message: types.Message, state: FSMContext):
+    current_state = await state.get_state()
+
+    if (current_state in (None, HaircutState.initialize.state)):
+        return
+
+    # Возвращаемся к выбору между курсы/контакты/прайс
+    if (current_state == HaircutState.haircut.state):
+        await lilabred_bot.send_message(
+            message.from_user.id,
+            "Выбери нужную опцию:",
+            reply_markup=kb.first_choice_button,
+        )
+        await HaircutState.initialize.set()
+        return
+    
+    # Возвращаемся в Прайс
+    if (current_state in (HaircutState.afro.state, HaircutState.bred.state, HaircutState.tail.state)):
+        await lilabred_bot.send_message(
+            message.from_user.id,
+            "Какая прическа тебя интересует?",
+            reply_markup=kb.price_choice_button,
+        )
+        await HaircutState.haircut.set()
+        return
+    
+    # Возвращаемся к выбору зоны для афрокосичек
+    if (current_state in (HaircutState.afro_full_head.state, HaircutState.afro_undercut.state)):
+        await lilabred_bot.send_message(
+            message.from_user.id,
+            "Выбери зону прически:",
+            reply_markup=kb.afro_zone_choice_button,
+        )
+        await HaircutState.afro.set()
+    
+    # Возвращаемся к выбору зоны для брейдов
+    if (current_state in (HaircutState.bred_full_head.state, HaircutState.bred_undercut.state)):
+        await lilabred_bot.send_message(
+            message.from_user.id,
+            "Выбери зону прически:",
+            reply_markup=kb.breds_zone_choice_button,
+        )
+        await HaircutState.bred.set()
+    
+    # Возвращаемся к выбору наличия материалов для брейдов на всю голову
+    if (current_state in (HaircutState.bred_full_head_with_material.state, HaircutState.bred_full_head_without_material.state)):
+        await lilabred_bot.send_message(
+            message.from_user.id,
+            "Брейды с материалом или без?",
+            reply_markup=kb.breds_head_material_button,
+        )
+        await HaircutState.bred_full_head.set()
+    
+    # Возвращаемся к выбору наличия материалов для брейдов на макушку
+    if (current_state in (HaircutState.bred_undercut_with_material.state, HaircutState.bred_undercut_without_material.state)):
+        await lilabred_bot.send_message(
+            message.from_user.id,
+            "Брейды с материалом или без?",
+            reply_markup=kb.breds_undercut_material_button,
+        )
+        await HaircutState.bred_undercut.set()
 
 # ____________________________________________Выбор опции___________________________________________________________
 
@@ -52,18 +115,6 @@ async def price_choice(message: types.Message):
         reply_markup=kb.price_choice_button,
     )
     await HaircutState.haircut.set()
-
-
-# Курсы/Контакты/Прайс < Возвращаемся к выбору между курсы/контакты/прайс
-@dp.message_handler(Text(equals="назад к выбору опций", ignore_case=True), state=HaircutState.haircut)
-async def options_choice(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Выбери нужную опцию:",
-        reply_markup=kb.first_choice_button,
-    )
-    await HaircutState.initialize.set()
-
 
 # ____________________________________________Выбран прайс___________________________________________________________
 
@@ -99,21 +150,6 @@ async def tail_length_choice(message: types.Message):
     )
     await HaircutState.tail.set()
 
-
-# Опции > Прайс < Возвращаемся в Прайс (выбор между афрокосички/брейды/афрохвост)
-@dp.message_handler(
-    Text(equals="назад к выбору прически", ignore_case=True),
-    state=[HaircutState.afro, HaircutState.bred, HaircutState.tail],
-)
-async def price_choice(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Какая прическа тебя интересует?",
-        reply_markup=kb.price_choice_button,
-    )
-    await HaircutState.haircut.set()
-
-
 # ___________________________________________Выбраны афрокосички > выбор зоны______________________________________________________
 
 # Опции > Прайс > Афрокосички точечно > Выбор зоны - Выбираем афрокосички на всю голову - предоставлен выбор толщины
@@ -136,21 +172,6 @@ async def afro_undercut_value_choice(message: types.Message):
         reply_markup=kb.afro_undercut_thickness_button,
     )
     await HaircutState.afro_undercut.set()
-
-
-# Опции > Прайс > Афрокосички точечно > Выбор зоны < Возвращаемся к выбору зоны для афрокосичек
-@dp.message_handler(
-    Text(equals="назад к выбору зоны для афрокосичек", ignore_case=True),
-    state=[HaircutState.afro_full_head, HaircutState.afro_undercut],
-)
-async def afro_zone_choice(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Выбери зону прически:",
-        reply_markup=kb.afro_zone_choice_button,
-    )
-    await HaircutState.afro.set()
-
 
 # ___________________________________________Выбраны афрокосички > зона: на всю голову______________________________________________________
 
@@ -245,20 +266,6 @@ async def breds_undercut_choice_material(message: types.Message):
     await HaircutState.bred_undercut.set()
 
 
-# Опции > Прайс > Афрокосички точечно > Выбор зоны < Возвращаемся к выбору зоны для брейдов
-@dp.message_handler(
-    Text(equals="назад к выбору зоны для брейдов", ignore_case=True),
-    state=[HaircutState.bred_full_head, HaircutState.bred_undercut],
-)
-async def bred_zone_choice(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Выбери зону прически:",
-        reply_markup=kb.breds_zone_choice_button,
-    )
-    await HaircutState.bred.set()
-
-
 # ___________________________________________Выбрана зона брейдов: вся голова > материал______________________________________________________
 
 
@@ -282,24 +289,6 @@ async def breds_head_withoutmat_choice_value(message: types.Message):
     await HaircutState.bred_full_head_without_material.set()
 
 
-# Опции > Прайс > Брейды > Выбор зоны: вся голова > Выбор материалов < Возвращаемся к выбору наличия материалов
-@dp.message_handler(
-    Text(equals="назад к выбору наличия материалов", ignore_case=True),
-    state=[
-        HaircutState.bred_full_head,
-        HaircutState.bred_full_head_with_material,
-        HaircutState.bred_full_head_without_material,
-    ],
-)
-async def breds_head_choice_material(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Брейды с материалом или без?",
-        reply_markup=kb.breds_head_material_button,
-    )
-    await HaircutState.bred_full_head.set()
-
-
 # ___________________________________________Выбрана зона брейдов: андеркат > материал______________________________________________________
 
 
@@ -321,25 +310,6 @@ async def breds_zone_choice(message: types.Message):
         reply_markup=kb.breds_undercut_thickness_button,
     )
     await HaircutState.bred_undercut_without_material.set()
-
-
-# Опции > Прайс > Афрокосички точечно > Выбор зоны: андеркат > Выбор материалов < Возвращаемся к выбору наличия материалов
-@dp.message_handler(
-    Text(equals="назад к выбору наличия материалов", ignore_case=True),
-    state=[
-        HaircutState.bred_undercut,
-        HaircutState.bred_undercut_with_material,
-        HaircutState.bred_undercut_without_material,
-    ],
-)
-async def breds_undercut_choice_material(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Брейды с материалом или без?",
-        reply_markup=kb.breds_undercut_material_button,
-    )
-    await HaircutState.bred_undercut.set()
-
 
 # ___________________________________________Выбрана зона брейдов: вся голова > с материалом > выбор кол-ва брейдов______________________________________________________
 
@@ -484,17 +454,6 @@ async def tail_lenght_middle(message: types.Message):
 @dp.message_handler(Text(equals="короткий хвост(40-45 см.)", ignore_case=True), state=HaircutState.tail)
 async def tail_lenght_short(message: types.Message):
     await lilabred_bot.send_message(message.from_user.id, "3 000 руб.")  # НУЖНО ФОТО
-
-
-@dp.message_handler(Text(equals="назад к выбору прически", ignore_case=True), state=HaircutState.tail)
-# Опции > Прайс < Возвращаемся в Прайс (выбор между афрокосички/брейды/афрохвост)
-async def price_choice(message: types.Message):
-    await lilabred_bot.send_message(
-        message.from_user.id,
-        "Какая прическа тебя интересует?",
-        reply_markup=kb.price_choice_button,
-    )
-    await HaircutState.haircut.set()
 
 
 # ___________________________________________UNKNOWN_MESSAGE______________________________________________________
