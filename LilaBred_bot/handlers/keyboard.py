@@ -1,7 +1,4 @@
-from aiogram.types import (
-    KeyboardButton,
-    ReplyKeyboardMarkup,
-)
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 # Опции
 
@@ -12,10 +9,7 @@ courses = KeyboardButton("Курсы")
 contacts = KeyboardButton("Контакты")
 
 first_choice_button = (
-    ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
-    .add(price)
-    .insert(courses)
-    .insert(contacts)
+    ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).add(price).insert(courses).insert(contacts)
 )
 
 # Прайс
@@ -111,7 +105,6 @@ tail_length_button = (
 )
 
 
-
 # Брейды зона
 
 breds_head_material = KeyboardButton("Вся голова")
@@ -126,7 +119,6 @@ breds_zone_choice_button = (
     .insert(breds_undercut_material)
     .insert(back_type_choice)
 )
-
 
 
 # Брейды > зона: вся голова > с материалом > толщина
@@ -148,7 +140,6 @@ breds_head_material_thickness_button = (
 )
 
 
-
 # Брейды > зона: вся голова > без материала > толщина
 
 breds_head_big = KeyboardButton("2-4 шт.")
@@ -166,7 +157,6 @@ breds_head_thickness_button = (
     .insert(breds_head_middle)
     .insert(back_zone_breds)
 )
-
 
 
 # Брейды > зона: макушка > с материалом > толщина
