@@ -88,8 +88,8 @@ $(document).ready(function () {
           Infinity:true,
           variableWidth: true, 
           fade: false,
-          focusOnSelect: true,
-          touchMove: true,
+          // focusOnSelect: true,
+          // touchMove: true,
           // centerPadding: '40px',
         }
       },

@@ -59,7 +59,7 @@ p {
   background-color: transparent;
   position: fixed;
   right: 20px;
-  top: 35%;
+  bottom: 35%;
   z-index: 15;
 }
 
@@ -360,7 +360,7 @@ hr {
 }
 
 #feedback {
-  background: url(/images/Background/FEEDBACK_purple-pink-glittery-background.png)
+  background: url(/images/Background/ФОН\ ОТЗЫВЫ.png)
     no-repeat center;
   background-size: cover;
   color: #fff;
@@ -593,11 +593,22 @@ hr {
 
   .wraper__scroll-link-mob{
     display: block;
+    
   }
+
+  .nav-scroll{
+    bottom: 10%;
+  }
+
+
 #aboutme {
     background: url("/images/Background/Фон\ -\ блок\ обо\ мне.png");
     background-size: cover;
     margin: 0 auto;
+  }
+
+  .icon{
+    margin: 40px 60px;
   }
   .feedback__wrapper-slider {
     width: 100%;
@@ -680,7 +691,15 @@ hr {
     width: 100%;
     transform: scale(1.1)
   }
-
+  .slider-lg .slick-arrow{
+      top:45%;
+  }
+  .slider-lg .slick-arrow.slick-next{
+    right: 17%;
+  }
+  .slider-lg .slick-arrow.slick-prev{
+    left: 17%;
+  }
   .slide-item-sm{
    /* width: 400px; */
    height: 530px;
@@ -692,7 +711,7 @@ hr {
 
   }
   .slick-slide:not(.slick-active){
-    opacity: 0.7;
+    opacity: 0.4;
 }
 
   /* .slide-item-sm  .slick-slide {
