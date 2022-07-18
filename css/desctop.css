@@ -668,9 +668,7 @@ hr {
     background: none  ;
     position:relative;
   }
-  .slick-center{
-    transform: scale(1.08);
-  }
+  
   /* .slick-slide:after {
     content:'';
     position: absolute;
@@ -693,6 +691,11 @@ hr {
    display: flex;
    flex-direction: column;
    justify-content: center;
+   transform: scale(0.8);
+  }
+
+  .slick-center{
+    transform: scale(1.08);
   }
 
   .slide-sm-img{
