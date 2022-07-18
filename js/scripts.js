@@ -82,14 +82,15 @@ $(document).ready(function () {
         breakpoint: 1111,
         settings: {
           centerMode: true,
-          centerPadding: '40px',
           slidesToShow: 1 , 
           slidesToScroll:1,
-          initialSlide:5,
+          initialSlide:1,
           Infinity:true,
           variableWidth: true, 
           fade: false,
-          adaptiveHeight: true
+          focusOnSelect: true,
+          touchMove: true,
+          // centerPadding: '40px',
         }
       },
       // {
