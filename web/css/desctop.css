@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'BIGJOHN'; /* Гарнитура шрифта */
+    src: url('../fonts/Big_John_Slim_Joe/BIGJOHN.otf') format('opentype'); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: 'OpenSans-Regular'; /* Гарнитура шрифта */
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype'); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: 'SourceSansPro-Regular'; /* Гарнитура шрифта */
+    src: url('../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype'); /* Путь к файлу со шрифтом */
+}
+
+body {
+	width: 100%;
+}
+span {
+	display:block;
+}
+.content {
+	width: 1100px;
+	padding: 50px 0;
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+h1{
+	font-size:35px;
+	font-family: 'SourceSansPro-Regular', 'Comic Sans MS';
+	text-transform:	uppercase;
+	font-weight: lighter;
+	letter-spacing: 0.2em;
+	text-shadow: 0 0 7px #fff, 0 0 3px #fff;	
+}
+h2{
+	font-size:24px;
+	font-family: 'SourceSansPro-Regular', 'Comic Sans MS';
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.2em;
+	font-weight: lighter;
+}
+p{
+	font-size: 16px;
+	font-family: 'OpenSans-Regular', 'Comic Sans MS';
+	line-height: 1.5;
+}
+#firstscreen{
+	 width: 100vw;
+	height: 100vh;
+	
+	background:url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) no-repeat top;
+	background-size: cover;
+	color: #fff;
+}
+.menu{
+	float: right;
+	margin-right: 8vw;
+	margin-top: 25px;
+}
+.menu ul li{
+	display:inline-block;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	padding: 5px 2px;
+    color: #fff;
+    text-align: center;
+	
+}
+.menu ul li:hover {
+	border: 1px solid #fff;
+	box-shadow: inset 0px 0px 5px #a15ec4, inset 0px 0px 7px #e14eb4, inset 0px 0px 10px #fff, 0 0 7px #e14eb4, 0 0 5px #a15ec4, 0px 0px 10px #fff;
+}
+.menu ul li a{
+	margin: 30px auto;
+    padding: 10px 10px;
+	text-decoration: none;
+    color: #fff;
+	font-family: 'OpenSans-Regular', 'Comic Sans MS';
+	font-size: 16px;
+}
+
+.block{
+	width: 100%;
+	background-size: cover;
+}
+
+#aboutme .content{
+	padding-left: 140px;
+	padding-right: 420px;
+	text-align: left;
+	color: #81868e;
+	width: 40%;
+}
+#aboutme .content h2{
+	color: #333b46;
+	text-align: left;
+}
+#aboutme{
+	background:url(../images/about_me_wight.png) no-repeat center;
+	/*background-color: #e3dfdf;*/
+	background-size: cover;
+}
+.hi{
+	text-align: center;
+	padding-top: 35vh;
+}
+#services{
+	
+	color: #fff;
+	background-color: #383838;
+}
+hr{
+	border: none; 
+    background-color: #fff; 
+    color: #fff; 
+    height: 2px; 
+	box-shadow: 0 0 10px #ac5ed3, 0 0 5px #ac5ed3, 0px 0px 15px #fff;
+	width: 150px;
+}
+.icon{
+	display:inline-block;
+	overflow: hidden;
+	background:url(../images/iconbg.png) no-repeat center;
+	width: 185px;
+	height: 185px;
+	margin: 85px 40px;
+	cursor: pointer;
+	
+}
+.icon img{
+	/*display: block; /* Убираем отступ снизу */
+    transition: 0.5s; /* Время перехода */
+	margin: auto;
+	margin-top: 33%;
+	
+
+
+	
+}
+.icon img:hover {
+    transform: scale(1.1); /* Масштабируем */
+}
+
+	
+#contactme {
+	background:url(../images/Background/contactme.png) no-repeat center;
+	color: #fff;
+	font-size: 20px;
+	background-size: cover;
+}		
+.button{
+	margin: 30px auto 10px;
+}
+#contactme a{	
+	
+    padding: 6px 35px;
+	text-decoration: none;
+    color: #fff;
+	font-family: 'OpenSans-Regular', 'Comic Sans MS';
+	font-size: 16px;
+	box-shadow: inset 0px 0px 5px #a15ec4, inset 0px 0px 7px #e14eb4, inset 0px 0px 10px #fff, 0 0 7px #e14eb4, 0 0 5px #a15ec4, 0px 0px 10px #fff;
+    border: 1px solid #fff;
+	border-radius: 22px;
+	
+}	
+#contactme a:hover {
+	background-color: #d363dd;
+}
+#portfolio{
+	background-color: #e3dfdf;
+	color: #81868e;
+	
+}
+#portfolio h2{
+	color: #333b46;
+}
+#portfolio hr{
+	color: #a457c7;
+	
+    background-color: #a457c7;
+  
+    box-shadow: none;
+}
+#feedback{
+	background:url(../images/Background/FEEDBACK.png) no-repeat center;
+	background-size: cover;
+	color: #fff;
+}
+#contact{
+	color: #fff;
+	background-color: #383838;
+}
+.logo{
+	float: left;
+	margin-left: 8vw;
+	margin-top: 35px;
+	font-size:25pt;
+	font-family: 'BIGJOHN', 'Comic Sans MS';
+	text-transform:	uppercase;	
+	text-shadow: 0 0 20px #e14eb4, 0px 0px 10px #fff, 0 0 10px #a15ec4;	
+}
+.nav{
+	position: absolute;
+    bottom: 30px;
+    left: 48vw;
+	transition: 0.7s;
+}
+.nav:hover {
+    transform: scale(1.2); 
+}
+.cont {
+	display:inline-block;
+	overflow: hidden;
+	width: 287px;
+	height: 145px;
+	margin: 40px 10px;
+	cursor: pointer;
+	text-transform:	uppercase;
+	background-size: cover;
+	
+	
+}
+.cont a{
+    text-decoration: none;
+}
+.phone{
+	background-image: url(../images/calldark.png);
+}
+.map{
+	background-image: url(../images/comedark.png);
+}
+.chat{
+	background-image: url(../images/writedark.png);
+}
+.phone:hover{
+
+	background-image: url(../images/calllight.png);
+}
+.map:hover{
+	background-image: url(../images/comelight.png);
+}
+.chat:hover{
+	background-image: url(../images/writelight.png);
+}
+.fstr{
+	color: #fff;
+	font-size:16px;
+	font-family: 'SourceSansPro-Regular', 'Comic Sans MS';
+	
+}
+.marg{
+	margin-top: 5vh;
+}
+.sstr{
+	font-family: 'OpenSans-Regular', 'Comic Sans MS';
+	font-size: 14px;
+	color: #fff;
+	
+}
+.galery{
+	
+}
