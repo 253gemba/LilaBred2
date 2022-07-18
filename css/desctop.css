@@ -88,6 +88,8 @@ p {
 #header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
 }
 
 #firstscreen {
@@ -273,7 +275,7 @@ hr {
 
 .wrapper-slide-lg {
   padding-top: 92px;
-  background: url("/images/Разворот\ фото/фон\ под\ фото.png") no-repeat center
+  background: url(../images/Background/фон\ под\ фото_целый.png) no-repeat center
     center / 100% auto;
   position: fixed;
   background-size: cover;
@@ -291,12 +293,6 @@ hr {
   display: inline;
 }
 
-.slide-item-lg {
-  /* display: flex;
-  justify-content: center;
-  text-align: center; */
-}
-
 .slider-lg .slick-arrow {
   position: absolute;
   top: 10px;
@@ -309,26 +305,26 @@ hr {
 
 .slider-lg .slick-arrow.slick-prev {
   left: 40%;
-  background: url("/images/Разворот\ фото/стрелка\ влево.png") 0 0 / 100%
+  background: url("../images/Разворот\ фото/стрелка\ влево.png") 0 0 / 100%
     no-repeat;
 }
 
 .slider-lg .slick-arrow.slick-next {
   right: 40%;
-  background: url("/images/Разворот\ фото/стрелка\ вправо.png") 0 0 / 100%
+  background: url("../images/Разворот\ фото/стрелка\ вправо.png") 0 0 / 100%
     no-repeat;
 }
 
 .slider-lg-btnClose {
   position: absolute;
   top: 10px;
-  right: 5px;
+  right: 20px;
   z-index: 100;
   font-size: 0;
   width: 49px !important;
   height: 49px;
   border: none;
-  background: url("/images/Разворот\ фото/закрыть.png") 0 0 / 100% no-repeat;
+  background: url("../images/Разворот\ фото/закрыть.png") 0 0 / 100% no-repeat;
   background-size: cover;
 }
 
@@ -355,12 +351,12 @@ hr {
 
 .wrap-contact{
   display: flex;
-    justify-content: space-between;
+  justify-content: center;
     align-items: flex-start;
 }
 
 #feedback {
-  background: url(/images/Background/ФОН\ ОТЗЫВЫ.png)
+  background: url(../images/Background/ФОН\ ОТЗЫВЫ.png)
     no-repeat center;
   background-size: cover;
   color: #fff;
@@ -512,31 +508,33 @@ hr {
   overflow: hidden;
   width: 287px;
   height: 145px;
-  margin: 40px 10px;
+  margin: 40px;
   cursor: pointer;
   text-transform: uppercase;
   background-size: cover;
 }
+
+
 .cont a {
   text-decoration: none;
 }
 .phone {
-  background-image: url(../images/calldark.png);
+  background-image: url(../images/contact/ЗВОНИ_блок_контакты_до_наведения.png);
 }
 .map {
-  background-image: url(../images/comedark.png);
+  background-image: url(../images/contact/ПРИХОДИ_блок_контакты_до_наведения.png);
 }
 .chat {
-  background-image: url(../images/writedark.png);
+  background-image: url(../images/contact/ПИШИ_блок_контакты_до_наведения.png);
 }
 .phone:hover {
-  background-image: url(../images/calllight.png);
+  background-image: url(../images/contact/ЗВОНИ_блок_контакты_после_наведения.png);
 }
 .map:hover {
-  background-image: url(../images/comelight.png);
+  background-image: url(../images/contact/ПРИХОДИ_блок_контакты_после_наведения.png);
 }
 .chat:hover {
-  background-image: url(../images/writelight.png);
+  background-image: url(../images/contact/ПИШИ_блок_контакты_после_наведения.png);
 }
 .fstr {
   color: #fff;
@@ -602,7 +600,7 @@ hr {
 
 
 #aboutme {
-    background: url("/images/Background/Фон\ -\ блок\ обо\ мне.png");
+    background: url("../images/Background/Фон\ -\ блок\ обо\ мне.png");
     background-size: cover;
     margin: 0 auto;
   }
@@ -634,13 +632,13 @@ hr {
 
   .feedback__wrapper-info p {
     margin-top: 15px;
-    height: 100%;
+    min-height: 100%;
   }
 
   .feedback__wrap {
     padding-bottom: 20px;
-    height: 500px;
     justify-content: space-evenly;
+    
   }
 
   .feedback__slider {
@@ -696,12 +694,15 @@ hr {
   }
   .slider-lg .slick-arrow.slick-next{
     right: 17%;
+    width: 40px;
+    height: 40px;
   }
   .slider-lg .slick-arrow.slick-prev{
     left: 17%;
+    width: 40px;
+    height: 40px;
   }
   .slide-item-sm{
-   /* width: 400px; */
    height: 530px;
    display: flex;
    flex-direction: column;
@@ -713,29 +714,17 @@ hr {
   .slick-slide:not(.slick-active){
     opacity: 0.4;
 }
-
-  /* .slide-item-sm  .slick-slide {
-    transform: scale(0.7)  translate(640px);
-  }
-  
-  .slide-item-sm  .slick-slide.slick-center + .slick-slide {
-    transform: scale(0.8) translate(-250px);
-    z-index: 10;
-  }
-  
-  .slide-item-sm  .slick-slide.slick-center + .slick-slide + .slide-item-sm .slick-slide {
-    transform: scale(0.7)  translate(-640px);
-    z-index: 5;
-  }
-  
-  .slide-item-sm  .slick-slide.slick-active {
-    transform: scale(0.8) translate(250px);
-  } */
-  
-  
+.cont {
+  background: none;
+  height: 170px;
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+ 
   .slick-center{
     transform: scale(1.1);
-    /* height: 560px; */
     background: none;
   }
 
@@ -782,7 +771,6 @@ hr {
 	background-color:#383838 ;
 	justify-content: space-between;
     padding: 35px;
-
   }
   #header .logo{
 	margin: 0;
@@ -845,15 +833,6 @@ hr {
     margin-top: 30px;
   }
 
-  .cont{
-	background: none;
-	height: 170px;
-	margin:5px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  }
   .cont:hover{
 	background: none;
   }
