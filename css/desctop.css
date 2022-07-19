@@ -1064,6 +1064,10 @@ height: 50px;
   }
 }
 @media screen and (max-width: 540px) {
+  #firstscreen {
+    background: url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) no-repeat 90% top;
+    background-size: cover;
+}
   .feedback__wrapper-info p {
     margin-bottom: 35px;
   }
