@@ -256,15 +256,19 @@ hr {
 }
 
 .grid-img {
+
   width: 100%;
   max-height: 361px;
   object-fit: cover;
   position: relative;
+  
+  z-index: 1;
 }
 
-.grid-img:hover {
-  transition: all 0.25s;
-}
+/* .grid-img:hover{
+  filter: none;
+} */
+
 
 .slick-list {
   overflow: hidden;
