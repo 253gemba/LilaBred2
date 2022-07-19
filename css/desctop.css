@@ -880,11 +880,11 @@ hr {
 .load{
 	margin:0 -75px;
 	position: absolute;
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	background: linear-gradient(90deg, #ffffff, #df3bb6 50%, #7b23ee);
-	animation: ani 5s linear infinite;
+	animation: zoomIn 7s, ani 5s linear infinite;
 }
 
 .load:before{
@@ -928,12 +928,12 @@ hr {
 	position:absolute;
 	top:3px;
 	left:3px;
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	opacity: 50%;
 	background: linear-gradient(90deg, #ff04c0, #0059ff 50%, #ffffff);
-	animation: ani2 5s linear infinite;
+	animation: zoomIn 7s, ani2 5s linear infinite;
 	}
 
 .load2:before{
@@ -979,12 +979,12 @@ hr {
 	position:absolute;
 	top:-4px;
 	left:-4px;
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	opacity: 70%;
 	background: linear-gradient(90deg, #ff04c0, #0059ff 50%, #000000);
-	animation: ani3 7s linear infinite;
+	animation: zoomIn 7s, ani3 7s linear infinite;
 	}
 
 .load3:before{
@@ -1023,3 +1023,18 @@ hr {
 		filter: hue-rotate(20deg);
 	}
 }	
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0);
+  }
+  
+  50% {
+    opacity: 1;
+  }
+  }
+  
+  .zoomIn {
+  animation-name: zoomIn;
+  }
