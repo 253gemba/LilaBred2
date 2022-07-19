@@ -1,33 +1,36 @@
-btnBurgerActiv = document.querySelectorAll('.HeaderbtnOpen')
-btnBurgerClose = document.querySelector('.HeaderbtnClose')
-burgerMenu = document.querySelector('.burger-menu')
-// burgerItem =document.querySelectorAll('.burger-item')
-// HeaderActive = document.querySelector('.HeaderbtnOpen')
-// btnHeaderNoActive = document.querySelector('.HeaderbtnClose')
-// btnBurger.forEach((item ) => {
-//   item.addEventListener('click', () =>{
-//           activeBurger()
-//   })
-// })
+///бургер меню
+let btnBurgerActiv = document.querySelector('.HeaderbtnOpen')
+let btnBurgerClose = document.querySelector('.HeaderbtnClose')
+let burgerMenu = document.querySelector('.burger-menu')
+const burgerItem =document.querySelectorAll('.burger-item')
+
+burgerItem.forEach((item ) => {
+  item.addEventListener('click', () =>{
+          activeBurger()
+  })
+})
+document.addEventListener("DOMContentLoaded", function () {
+  btnBurgerActiv.addEventListener("click", activeBurger);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   btnBurgerClose.addEventListener("click", activeBurger);
-  btnBurgerActiv.addEventListener("click", activeBurger);
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//   btnBurgerActiv.addEventListener("click", activeBurger);
-// });
 
 const activeBurger = () => {
-  if(burgerMenu.style.display == "none"){
-    burgerMenu.style.display = "flex";
-  }else{
-    burgerMenu.style.display = "none";
-  }
-
+  burgerMenu.classList.toggle('burger-menu-Active')
+ if(btnBurgerClose.classList.contains('btnHeaderActive')){
+  btnBurgerClose.classList.remove('btnHeaderActive')
+  btnBurgerActiv.classList.add('btnHeaderActive')
+ }else if(btnBurgerActiv.classList.contains('btnHeaderActive')){
+  btnBurgerActiv.classList.remove('btnHeaderActive')
+  btnBurgerClose.classList.add('btnHeaderActive')
+ }else{
+  btnBurgerClose.classList.add('btnHeaderActive')
+ }
 }
 
-
+//слайдер отзывы 
 const prevL = document.querySelector('.feedback_btn-mobL');
 const prev = document.querySelector('.feedback__slider-btnPrev');
 const nextR = document.querySelector('.feedback_btn-mobR');

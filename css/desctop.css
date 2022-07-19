@@ -101,6 +101,10 @@ p {
   color: #fff;
 }
 
+.burger-menu{
+  display: none;
+}
+
 .header-btn-sm {
   display: none;
 }
@@ -752,11 +756,6 @@ hr {
     display: none;
   }
 
-  .slick-next {
-  }
-  .slick-prev {
-  }
-
   .content {
     width: 100%;
   }
@@ -804,6 +803,10 @@ hr {
 @media screen and (max-width: 860px) {
 
   .burger-menu{
+    display: none;
+  }
+
+  .burger-menu-Active {
     background: url(../images/Background/фон\ под\ фото_целый.png) no-repeat center center / 100% auto;
     position: fixed;
     background-size: cover;
@@ -812,15 +815,15 @@ hr {
     top: 0;
     left: 0;
     z-index: 100;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  #burger{
+  /* #burger{
     z-index: 101;
     display: block;
-  }
+  } */
 
   .burger-item{
     color: #fff;
@@ -863,7 +866,7 @@ hr {
   display: none;
   width: 62px;
     height: 41px;
-    background: url("..images/Разворот фото/mobile/menu_open.png");
+    background: url("../images/Разворот фото/mobile/menu_open.png");
     z-index: 101;
 
 }
@@ -872,10 +875,9 @@ hr {
     
   }
   #header {
-    background-color: #383838;
+    background-color: #383838eb;
     justify-content: space-between;
     padding: 35px;
-    opacity: 0.9;
   }
  
   #header .logo {
