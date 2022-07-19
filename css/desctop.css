@@ -1097,6 +1097,7 @@ height: 50px;
 @media screen and (max-width: 440px) {
   #firstscreen{
     background: url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) 90% 0 no-repeat; 
+    background-size: cover
   }
   .slick-center {
     width: 300px;
