@@ -177,6 +177,9 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
 }
+.heden-text {
+  color: #bb5ae8;
+}
 
 .icon {
   display: inline-block;
@@ -212,7 +215,7 @@ hr {
   /*display: block; /* Убираем отступ снизу */
   transition: 0.5s; /* Время перехода */
   margin: auto;
-  margin-top: 33%;
+  margin-top: 11%;
 }
 
 #contactme {
@@ -696,6 +699,9 @@ hr {
     background: none;
     margin: 20px;
   }
+  .icon_hidden img{
+    margin-top: 10%;
+  }
 
   .nav-scroll {
     right: 20px;
@@ -955,28 +961,39 @@ hr {
   .HeaderbtnClose {
     display: none;
     height: 100%;
-    background: url("../images/Разворот фото/mobile/menu_close.png");
+    background: url("../images/Разворот фото/mobile/small_burger_button.png");
     z-index: 101;
-    min-height: 41px;
-    min-width: 62px;
+    min-height: 48px;
+    min-width: 52px;
   }
 
   .HeaderbtnOpen {
     display: none;
-    background: url("../images/Разворот фото/mobile/menu_open.png");
+    background: url("../images/Разворот фото/mobile/small_angle_button.png");
     z-index: 101;
-    min-height: 41px;
-    min-width: 62px;
-  }
+    min-height: 48px;
+    min-width: 52px;
+  
+}
+  
   .header-btn-sm {
     display: block;
+    width: 52px;
+    height: 50px;
+  }
+  .header-btn-sm{
+    width: 50px;
+height: 50px;
   }
   #header {
-    background-color: #383838eb;
+    background-color: #38383899;
     justify-content: space-between;
-    padding: 35px;
+    align-items: self-end;
+    padding: 15px;
   }
 
+  
+ 
   #header .logo {
     margin: 0px 10px;
   }
@@ -1074,6 +1091,9 @@ hr {
 }
 
 @media screen and (max-width: 440px) {
+  #firstscreen{
+    background: url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) 90% 0 no-repeat; 
+  }
   .slick-center {
     width: 300px;
     height: 350px;
@@ -1100,6 +1120,11 @@ hr {
   .slick-dots .slick-active button {
     background-color: #222222;
   }
+
+  #header {
+    
+    padding: 10px;
+  } 
 }
 
 @media screen and (min-width: 1111px) {
