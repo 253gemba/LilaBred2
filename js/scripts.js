@@ -1,3 +1,33 @@
+btnBurgerActiv = document.querySelectorAll('.HeaderbtnOpen')
+btnBurgerClose = document.querySelector('.HeaderbtnClose')
+burgerMenu = document.querySelector('.burger-menu')
+// burgerItem =document.querySelectorAll('.burger-item')
+// HeaderActive = document.querySelector('.HeaderbtnOpen')
+// btnHeaderNoActive = document.querySelector('.HeaderbtnClose')
+// btnBurger.forEach((item ) => {
+//   item.addEventListener('click', () =>{
+//           activeBurger()
+//   })
+// })
+
+document.addEventListener("DOMContentLoaded", function () {
+  btnBurgerClose.addEventListener("click", activeBurger);
+  btnBurgerActiv.addEventListener("click", activeBurger);
+});
+// document.addEventListener("DOMContentLoaded", function () {
+//   btnBurgerActiv.addEventListener("click", activeBurger);
+// });
+
+const activeBurger = () => {
+  if(burgerMenu.style.display == "none"){
+    burgerMenu.style.display = "flex";
+  }else{
+    burgerMenu.style.display = "none";
+  }
+
+}
+
+
 const prevL = document.querySelector('.feedback_btn-mobL');
 const prev = document.querySelector('.feedback__slider-btnPrev');
 const nextR = document.querySelector('.feedback_btn-mobR');
@@ -93,21 +123,25 @@ $(document).ready(function () {
           // centerPadding: '40px',
         }
       },
-      // {
-      //   breakpoint: 480,
-      //   settings: {
-      //     arrows: false,
-      //     centerMode: true,
-      //     centerPadding: '40px',
-      //     slidesToShow: 1
-      //   }
-      // }
+      {
+        breakpoint: 740,
+        settings: {
+          centerMode: true,
+           slidesToShow: 1 , 
+          slidesToScroll:1,
+          initialSlide:1,
+          Infinity:true,
+          variableWidth: true, 
+          fade: false,
+          arrows: false,
+        }
+      }
     ]
   });
   $("a[data-slide]").click(function (e) {
     e.preventDefault();
     var slideno = $(this).data("slide");
-    slideClose.style.display = "block";
+    slideClose.style.display = "flex";
     $(".slider-lg").slick("slickGoTo", slideno - 1);
   $(".slider-lg").slick('setPosition');
 

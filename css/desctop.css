@@ -219,7 +219,7 @@ hr {
   background-color: #d363dd;
 }
 #portfolio {
-  background-color: #e3dfdf;
+  background-color: #e5e0e0;
   color: #81868e;
 }
 #portfolio h2 {
@@ -272,8 +272,7 @@ hr {
 }
 
 .wrapper-slide-lg {
-  padding-top: 92px;
-  background: url(../images/Background/фон\ под\ фото_целый.png) no-repeat
+    background: url(../images/Background/фон\ под\ фото_целый.png) no-repeat
     center center / 100% auto;
   position: fixed;
   background-size: cover;
@@ -282,7 +281,9 @@ hr {
   top: 0;
   left: 0;
   display: none;
-  z-index: 999;
+  z-index: 50;
+    flex-direction: column;
+    justify-content: center;
 }
 .mobAct {
   display: none;
@@ -577,8 +578,29 @@ hr {
 .cont-img {
   display: none;
 }
+.HeaderbtnOpen,.HeaderbtnClose{
+  display: none;
+}
+.tg{
+  color: #747980;
+  font-size: 16px;
+    font-family: "OpenSans-Regular", "Comic Sans MS";
+    line-height: 1.5;
+}
+@media screen and (max-width: 1400px) {
+  
+  #firstscreen{
+    background: url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) no-repeat top right;
+    background-size: cover;
+  }
+}
+
 
 @media screen and (max-width: 1110px) {
+
+  .burger-menu{
+    display: none;
+  }
   .wraper__scroll-link {
     display: none;
   }
@@ -592,9 +614,12 @@ hr {
   }
 
   #aboutme {
-    background: url("../images/Background/Фон\ -\ блок\ обо\ мне.png");
+    background: url("../images/Background/Фон\ -\ блок\ обо\ мне.png") no-repeat center center;
     background-size: cover;
     margin: 0 auto;
+  }
+  #aboutme .content{
+    width: 80%;
   }
 
   .icon {
@@ -777,17 +802,82 @@ hr {
 }
 
 @media screen and (max-width: 860px) {
+
+  .burger-menu{
+    background: url(../images/Background/фон\ под\ фото_целый.png) no-repeat center center / 100% auto;
+    position: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #burger{
+    z-index: 101;
+    display: block;
+  }
+
+  .burger-item{
+    color: #fff;
+    font-family: "SourceSansPro-Regular", "Comic Sans MS";
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-shadow: 0 0 7px #fff, 0 0 3px #fff;
+    font-size: 50px;
+  }
+
+  #contactme{
+    background: #ffffff;
+    color:#9499a1;
+  }
+  #contactme a{
+    color:#9499a1;
+    box-shadow: none;
+    border: 1px solid #9499a1;
+  }
+  #contactme a:hover{
+    background:#9499a1;
+    color: #fff;
+  }
   .menu {
     display: none;
   }
+  .btnHeaderActive{
+    display: block!important;
+  }
+.HeaderbtnClose{
+  display: none;
+  width: 62px;
+    height: 41px;
+  background: url("../images/Разворот фото/mobile/menu_close.png");
+  z-index: 101;
+
+}
+
+.HeaderbtnOpen{
+  display: none;
+  width: 62px;
+    height: 41px;
+    background: url("..images/Разворот фото/mobile/menu_open.png");
+    z-index: 101;
+
+}
   .header-btn-sm {
     display: block;
+    
   }
   #header {
     background-color: #383838;
     justify-content: space-between;
     padding: 35px;
+    opacity: 0.9;
   }
+ 
   #header .logo {
     margin: 0;
   }
@@ -818,11 +908,9 @@ hr {
     padding-left: 45px;
     padding-right: 430px;
     text-align: left;
-    width: 48%;
   }
 
   #header button {
-    background: none;
     border: none;
   }
 
@@ -853,9 +941,12 @@ hr {
     font-size: 14px;
     /* height: 140px; */
     margin-top: 15px;
+    height: 220px;
+    text-align: center;
+
   }
   .feedback__slide h2 {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 30px;
   }
 }
