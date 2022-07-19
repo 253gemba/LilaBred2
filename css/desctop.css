@@ -185,6 +185,30 @@ hr {
   margin: 85px 40px;
   cursor: pointer;
 }
+.icon:hover {
+  animation: pulse 3s, ; /* Масштабируем */
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
+}
+
+.rotateOut {
+  animation-name: rotateOut;
+  transform-origin: center;
+}
 .icon img {
   /*display: block; /* Убираем отступ снизу */
   transition: 0.5s; /* Время перехода */
