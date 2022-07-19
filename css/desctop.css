@@ -630,6 +630,27 @@ hr {
 }
 
 @media screen and (max-width: 1110px) {
+  @keyframes pulse {
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+  
+  }
+
+  
+  .pulse {
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+  }
+
   .circle-back-1 {
     display: block;
     position: absolute;
@@ -637,6 +658,11 @@ hr {
     height: 1000px;
     top: 483px;
     left: -640px;
+    -webkit-animation: pulse 5s,  infinite;
+    -moz-animation: pulse 5s,  infinite;
+    -ms-animation: pulse 5s,  infinite;
+    animation: pulse 5s,  infinite;
+    animation-iteration-count:infinite
   }
   .circle-back-2 {
     display: block;
@@ -645,6 +671,11 @@ hr {
     height: 1000px;
     bottom: 230px;
     right: -600px;
+    -webkit-animation: pulse 5s, infinite ;
+    -moz-animation: pulse 5s, infinite ;
+    -ms-animation: pulse 5s, infinite ;
+    animation: pulse 5s, infinite ;
+    animation-iteration-count:infinite
   }
 
   .heden-text {
@@ -803,7 +834,6 @@ hr {
     opacity: 0.4;
   }
   .cont {
-    /* background: none; */
     height: 170px;
     margin: 5px 10px;
     display: flex;
@@ -1081,6 +1111,10 @@ hr {
     border-radius: 50%;
     background: linear-gradient(90deg, #ffffff, #df3bb6 50%, #7b23ee);
     animation: zoomIn 7s, ani 5s linear infinite;
+    -webkit-animation: zoomIn 7s, ani 5s linear infinite;
+    -moz-animation: zoomIn 7s, ani 5s linear infinite;
+    -ms-animation: zoomIn 7s, ani 5s linear infinite;
+    animation: zoomIn 7s, ani 5s linear infinite;
   }
 
   .load:before {
@@ -1129,6 +1163,10 @@ hr {
     border-radius: 50%;
     opacity: 50%;
     background: linear-gradient(90deg, #ff04c0, #0059ff 50%, #ffffff);
+    animation: zoomIn 7s, ani2 5s linear infinite;
+    -webkit-animation: zoomIn 7s, ani2 5s linear infinite;
+    -moz-animation: zoomIn 7s, ani2 5s linear infinite;
+    -ms-animation: zoomIn 7s, ani2 5s linear infinite;
     animation: zoomIn 7s, ani2 5s linear infinite;
   }
 
@@ -1179,6 +1217,10 @@ hr {
     border-radius: 50%;
     opacity: 70%;
     background: linear-gradient(90deg, #ff04c0, #0059ff 50%, #000000);
+    animation: zoomIn 7s, ani3 7s linear infinite;
+    -webkit-animation: zoomIn 7s, ani3 7s linear infinite;
+    -moz-animation: zoomIn 7s, ani3 7s linear infinite;
+    -ms-animation: zoomIn 7s, ani3 7s linear infinite;
     animation: zoomIn 7s, ani3 7s linear infinite;
   }
 
