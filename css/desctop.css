@@ -59,7 +59,7 @@ p {
 .nav-scroll {
   background-color: transparent;
   position: fixed;
-  right: 40px;
+  right: 20px;
   bottom: 20%;
   z-index: 15;
 }
@@ -284,7 +284,7 @@ hr {
   max-height: 361px;
   object-fit: cover;
   filter: grayscale(26%) sepia(32%) hue-rotate(298deg) saturate(101%) contrast(96%);
-  -webkit-filter: grayscale(26%) sepia(32%) hue-rotate(274deg) saturate(101%) contrast(96%);
+  -webkit-filter: grayscale(26%) sepia(32%) hue-rotate(323deg) saturate(101%) contrast(96%);
   -moz-filter: grayscale(26%) sepia(32%) hue-rotate(334deg) saturate(101%) contrast(96%);
   z-index: 1;
 }
@@ -293,10 +293,10 @@ hr {
   filter: none;
   transition: transform 0.5s ease;
   -webkit-transform: translateX(-2px);
-    transform: translateY(-5px);
-    -webkit-box-shadow: 4px 4px 8px 15px rgba(164, 87, 199, 0.64);
--moz-box-shadow: 4px 4px 8px 15px rgba(164, 87, 199, 0.64);
-box-shadow: 0px 1px 3px 6px rgb(164 87 199 / 64%);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0px 1px 18px 3px #bb5ae8;
+  -moz-box-shadow: 0px 1px 18px 3px #bb5ae8;
+  box-shadow: 0px 1px 18px 3px #bb5ae8;
 }
 .slick-list {
   overflow: hidden;
@@ -400,8 +400,8 @@ opacity: 0.2;
 
 .wrap-contact {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #feedback {
@@ -551,12 +551,14 @@ opacity: 0.2;
 .cont {
   display: inline-block;
   overflow: hidden;
-  width: 287px;
-  height: 145px;
-  margin: 20px;
+  width: 330px;
+  height: 180px;
   cursor: pointer;
   text-transform: uppercase;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cont a {
@@ -676,10 +678,10 @@ opacity: 0.2;
   .circle-back-1 {
     display: block;
     position: absolute;
-    width: 1000px;
-    height: 1000px;
-    top: 483px;
-    left: -640px;
+    width: 1200px;
+    height: 1200px;
+    top: 1734px;
+    left: -690px;
     -webkit-animation: pulse 5s,  infinite;
     -moz-animation: pulse 5s,  infinite;
     -ms-animation: pulse 5s,  infinite;
@@ -689,10 +691,10 @@ opacity: 0.2;
   .circle-back-2 {
     display: block;
     position: absolute;
-    width: 1000px;
-    height: 1000px;
-    bottom: 230px;
-    right: -600px;
+    width: 1200px;
+    height: 1200px;
+    top: 1195px;
+    right: -665px;
     -webkit-animation: pulse 5s, infinite ;
     -moz-animation: pulse 5s, infinite ;
     -ms-animation: pulse 5s, infinite ;
@@ -735,9 +737,12 @@ opacity: 0.2;
   .wraper__scroll-link-mob {
     display: block;
   }
+  .wraper__scroll-link-mob img{
+    width: 60px;
+  }
 
   .nav-scroll {
-    bottom: 10%;
+    bottom: 14%;
   }
 
   #aboutme {
@@ -875,6 +880,7 @@ opacity: 0.2;
     opacity: 0.4;
   }
   .cont {
+    width: 280px;
     height: 170px;
     margin: 5px 10px;
     display: flex;
@@ -901,7 +907,14 @@ opacity: 0.2;
     display: none;
   }
 }
+@media (min-width: 860px) and (max-width: 1199px) { 
+  #aboutme .content {
+    margin-left: 100px;
+}
 
+
+     
+ }
 @media screen and (max-width: 950px) {
   .menu {
     margin-right: 3vw;
@@ -939,6 +952,19 @@ opacity: 0.2;
 }
 
 @media screen and (max-width: 860px) {
+  .circle-back-2{
+    width: 1100px;
+    height: 1100px;
+    top: 1286px;
+    right: -665px;
+  }
+  .circle-back-1{
+    width: 1100px;
+    height: 1100px;
+    top: 1762px;
+    left: -652px;
+  }
+
   .burger-menu {
     display: none;
   }
@@ -996,8 +1022,9 @@ opacity: 0.2;
     height: 100%;
     background: url("../images/Разворот фото/mobile/small_burger_button.png");
     z-index: 101;
-    min-height: 48px;
+    min-height: 51px;
     min-width: 52px;
+    transform: scale(0.8);
   }
 
   .HeaderbtnOpen {
@@ -1078,7 +1105,23 @@ height: 50px;
     background: none;
   }
 }
+@media screen and (max-width: 660px) {
+  .circle-back-2{
+    top: 1286px;
+    right: -710px;
+  }
+  .circle-back-1{
+    top: 1762px;
+    left: -691px;
+  }
+}
 
+@media screen and (max-width: 570px) {
+ 
+  .circle-back-1{
+    top: 1817px;
+    }
+}
 @media screen and (max-width: 600px) {
   .feedback__slide p {
     display: flex;
@@ -1134,7 +1177,7 @@ height: 50px;
 
 @media screen and (max-width: 440px) {
   #firstscreen{
-    background: url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) 90% 0 no-repeat; 
+    background: url(../images/Background/MAIN_SCREEN_IMAGE_Screen.png) 86% 0 no-repeat; 
     background-size: cover
   }
   .slick-center {
@@ -1184,176 +1227,11 @@ height: 50px;
 
 
 @media screen and (min-width: 1111px) { 
-  .load {
-    margin: 0 -75px;
+  
+  .load{
+    background: url('../images/Разворот\ фото/Круг светящийся - блок услуги1 .png');
     position: absolute;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, #ffffff, #df3bb6 50%, #7b23ee);
-    animation: zoomIn 7s, ani 5s linear infinite;
-    -webkit-animation: zoomIn 7s, ani 5s linear infinite;
-    -moz-animation: zoomIn 7s, ani 5s linear infinite;
-    -ms-animation: zoomIn 7s, ani 5s linear infinite;
-    animation: zoomIn 7s, ani 5s linear infinite;
-  }
-
-  .load:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #383838;
-    border-radius: 50%;
-    z-index: -1000;
-  }
-  .load:after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: linear-gradient(45deg, transparent, transparent 20%, #7b23ee);
-    border-radius: 50px;
-    z-index: -10000;
-    filter: blur(30px);
-  }
-
-  @keyframes ani {
-    0% {
-      transform: rotate(0deg);
-      filter: hue-rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-      filter: hue-rotate(20deg);
-    }
-  }
-
-  .load2 {
-    margin: 0 -70px;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    opacity: 50%;
-    background: linear-gradient(90deg, #ff04c0, #0059ff 50%, #ffffff);
-    animation: zoomIn 7s, ani2 5s linear infinite;
-    -webkit-animation: zoomIn 7s, ani2 5s linear infinite;
-    -moz-animation: zoomIn 7s, ani2 5s linear infinite;
-    -ms-animation: zoomIn 7s, ani2 5s linear infinite;
-    animation: zoomIn 7s, ani2 5s linear infinite;
-  }
-
-  .load2:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #383838;
-    border-radius: 50%;
-    z-index: -1;
-  }
-
-  .load2:after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: linear-gradient(270deg, transparent, transparent 10%, #7b23ee);
-    border-radius: 50px;
-    z-index: -1000;
-    filter: blur(30px);
-  }
-
-  @keyframes ani2 {
-    0% {
-      transform: rotate(0deg);
-      filter: hue-rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-      filter: hue-rotate(20deg);
-    }
-  }
-
-  .load3 {
-    margin: 0 -70px;
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    opacity: 70%;
-    background: linear-gradient(90deg, #ff04c0, #0059ff 50%, #000000);
-    animation: zoomIn 7s, ani3 7s linear infinite;
-    -webkit-animation: zoomIn 7s, ani3 7s linear infinite;
-    -moz-animation: zoomIn 7s, ani3 7s linear infinite;
-    -ms-animation: zoomIn 7s, ani3 7s linear infinite;
-    animation: zoomIn 7s, ani3 7s linear infinite;
-  }
-
-  .load3:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #383838;
-    border-radius: 50%;
-    z-index: -1;
-  }
-
-  .load3:after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: linear-gradient(320deg, transparent, transparent 30%, #7b23ee);
-    border-radius: 50px;
-    z-index: -1000;
-    filter: blur(30px);
-  }
-
-  @keyframes ani3 {
-    0% {
-      transform: rotate(0deg);
-      filter: hue-rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-      filter: hue-rotate(20deg);
-    }
-  }
-
-  @keyframes zoomIn {
-    from {
-      opacity: 0;
-      transform: scale3d(0);
-    }
-
-    50% {
-      opacity: 1;
-    }
-  }
-
-  .zoomIn {
-    animation-name: zoomIn;
+width: 600px;
+height: 600px;
   }
 }
