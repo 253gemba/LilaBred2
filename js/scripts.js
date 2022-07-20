@@ -149,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   $(".slider-lg").slick({
     arrows: true,
-    autoplay: false,
     fade: true,
     responsive: [
       {
