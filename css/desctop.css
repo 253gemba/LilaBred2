@@ -1132,7 +1132,20 @@ height: 50px;
   } 
 }
 
-@media screen and (min-width: 1111px) {
+@media screen and (max-width: 400px) {
+  .slider-sm{
+    transform: none;
+  }
+  .feedback__slide p{
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1111px) { 
   .load {
     margin: 0 -75px;
     position: absolute;

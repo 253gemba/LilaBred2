@@ -192,6 +192,20 @@ $(document).ready(function () {
           autoplay: true,
         },
       },
+      {
+        breakpoint: 320,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          Infinity: true,
+          variableWidth: true,
+          fade: false,
+          arrows: false,
+          autoplay: true,
+        },
+      },
     ],
   });
   $("a[data-slide]").click(function (e) {
