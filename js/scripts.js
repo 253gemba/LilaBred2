@@ -4,7 +4,7 @@
 const buttons = document.querySelectorAll('#services .services__wrapper-icons .icon');
 const buttons_hidden = document.querySelectorAll('#services .services__wrapper-icons .icon_hidden');
 const circles = document.querySelectorAll('#services .services__wrapper-icons .circle')
-
+const info  = document.querySelectorAll('#services .services__wrapper-icons .icon_hidden .info')
 for (let i = 0; i < 4; i++) {
     buttons[i].addEventListener('click', function () {        
         let index = i;
@@ -12,12 +12,15 @@ for (let i = 0; i < 4; i++) {
             if (j == index) {
                 buttons[j].style.display = 'none';
                 buttons_hidden[j].style.display = 'inline-block';
+                info[j].style.display = 'block';
                 circles[j].style.display = '';
+
             }
             else {
               circles[j].style.display = 'none';
               buttons_hidden[j].style.display = 'block  ';
                 buttons[j].style.display = 'inline-block';
+                info[j].style.display = 'none';
             }
         }
     });
@@ -30,6 +33,8 @@ for (let i = 0; i < 4; i++) {
           buttons[j].style.display = 'inline-block';
           buttons_hidden[j].style.display = 'block';
           circles[j].style.display = 'none';
+          info[j].style.display = 'none';
+
       }
     });
 }

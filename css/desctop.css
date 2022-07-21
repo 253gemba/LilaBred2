@@ -186,7 +186,7 @@ hr {
   justify-content: center;
   margin: 70px 0px;
 }
-.heden-text {
+.hidden-text {
   color: #bb5ae8;
 }
 
@@ -195,8 +195,8 @@ hr {
   width: 200px;
   height: 200px;
   /* margin: 30px 60px; */
-  top: -8px;
-  left: -8px;
+  top: -40px;
+    left: -8px;
   cursor: pointer;
   position: absolute  ;
   z-index: 1; 
@@ -224,8 +224,6 @@ hr {
 .icon_hidden img {
   /*display: block; /* Убираем отступ снизу */
   transition: 0.5s; /* Время перехода */
-  margin: auto;
-  margin-top: 11%;
 }
 
 #contactme {
@@ -678,6 +676,10 @@ opacity: 0.2;
   }
 }
 @media screen and (max-width: 1110px) {
+.info{
+  display: block!important;
+}
+
   @keyframes pulse {
     100% {
       transform: scale3d(1, 1, 1);
@@ -1343,17 +1345,18 @@ height: 50px;
 right: -136%;
 }
 }
-@media screen and (max-width: 390px) {
+
+@media screen and (max-width: 330px) {
   .circle-back-2{
     bottom: -17%;
-    left: -140%;
-  
+    left: -169%;
   }
   .circle-back-1{
     top: -4%;
-    right: -140%;
+    right: -168%;
 }
 }
+
 @media screen and (max-width: 400px) {
   .slider-sm{
     transform: none;
@@ -1393,7 +1396,7 @@ right: -136%;
    width: 490px;
    height: 490px;
    left: -155px;
-   top: -150px;
+   top: -170px;;
     display: block;
     background-position: center;
     background-size: cover;
