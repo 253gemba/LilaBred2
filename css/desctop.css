@@ -273,7 +273,6 @@ hr {
   z-index: 0;
   padding-bottom: 50px;
   min-height: 100%;
-  min-height: 1000px;
   columns: 4;
   column-gap: 5px;
 }
