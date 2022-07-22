@@ -13,7 +13,7 @@ for (let i = 0; i < 4; i++) {
                 buttons[j].style.display = 'none';
                 buttons_hidden[j].style.display = 'inline-block';
                 info[j].style.display = 'block';
-                circles[j].style.display = '';
+                circles[j].style.display = 'block';
 
             }
             else {
@@ -179,6 +179,20 @@ $(document).ready(function () {
       },
       {
         breakpoint: 500,
+        settings: {
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          Infinity: true,
+          variableWidth: true,
+          fade: false,
+          arrows: false,
+          autoplay: true,
+        },
+      },
+      {
+        breakpoint: 460,
         settings: {
           centerMode: true,
           slidesToShow: 1,
