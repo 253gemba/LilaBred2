@@ -313,7 +313,7 @@ break-inside: avoid;
       break-inside: avoid;
 }
 
-/* .grid a{
+.grid a{
   filter: grayscale(26%) sepia(32%) hue-rotate(298deg) saturate(101%) contrast(96%);
   -webkit-filter: grayscale(26%) sepia(32%) hue-rotate(323deg) saturate(101%) contrast(96%);
   -moz-filter: grayscale(26%) sepia(32%) hue-rotate(334deg) saturate(101%) contrast(96%);
@@ -329,35 +329,12 @@ transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 -webkit-transform: translateX(-2px);
 -ms-transform: translateY(-5px);
 transform: translateY(-5px);
--webkit-box-shadow: 0px 1px 18px 3px #bb5ae8;
-box-shadow: 0px 1px 18px 3px #bb5ae8;
-} */
 
-.grid-img {
-  width: 100%;
-  max-height: 361px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(26%) sepia(32%) hue-rotate(298deg) saturate(101%) contrast(96%);
-  -webkit-filter: grayscale(26%) sepia(32%) hue-rotate(323deg) saturate(101%) contrast(96%);
-  -moz-filter: grayscale(26%) sepia(32%) hue-rotate(334deg) saturate(101%) contrast(96%);
-  z-index: 1;
 }
 
-.grid-img:hover {
-  -webkit-filter: none;
-  filter: none;
--webkit-transition: -webkit-transform 0.5s ease;
-transition: -webkit-transform 0.5s ease;
--o-transition: transform 0.5s ease;
-transition: transform 0.5s ease;
-transition: transform 0.5s ease, -webkit-transform 0.5s ease;
--webkit-transform: translateX(-2px);
--ms-transform: translateY(-5px);
-transform: translateY(-5px);
--webkit-box-shadow: 0px 1px 18px 3px #bb5ae8;
-box-shadow: 0px 1px 18px 3px #bb5ae8;
-}
+
+
+
 .slick-list {
   overflow: hidden;
 }

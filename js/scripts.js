@@ -221,7 +221,7 @@ $(document).ready(function () {
       },
     ],
   });
-  $("a[data-slide]").click(function (e) {
+  $("div[data-slide]").click(function (e) {
     e.preventDefault();
     var slideno = $(this).data("slide");
     slideClose.style.display = "flex";
